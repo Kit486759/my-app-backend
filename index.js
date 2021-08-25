@@ -18,9 +18,19 @@ app.use(basicAuth({
     }
 }))
 
+app.get('/profile', (req, res, next) => {
+    console.log('You have login')
+    res.end(`This is profile page`)
+})
+
+app.get('/api/login', (req, res, next) => {
+    // console.log('test')
+    res.status(302).redirect('/')
+})
+
 app.get('/', (req, res, next) => {
-    console.log('test')
-    res.end(`This is home page`)
+    // console.log('test')
+    res.end("This is home page.")
 })
 
 app.use('/', (req, res, next) => {
