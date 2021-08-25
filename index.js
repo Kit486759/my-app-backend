@@ -25,7 +25,7 @@ app.get('/profile', (req, res, next) => {
 
 app.get('/api/login', (req, res, next) => {
     // console.log('test')
-    res.status(302).redirect('/')
+    res.status(302).redirect('/profile')
 })
 
 app.get('/', (req, res, next) => {
